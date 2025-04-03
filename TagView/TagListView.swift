@@ -44,14 +44,14 @@ struct TagListView: View {
                     .alignmentGuide(.leading) { d in
                         if width + d.width + 8 > geometry.size.width {
                             width = 0
-                            height -= d.height
+                            height += d.height
                         }
                         let result = width
-                        width += d.width + 26
+                        width += d.width + 8
                         return result
                     }
                     .alignmentGuide(.top) { _ in
-                        let result = height
+                       let result = height
                         return result
                     }
             }
